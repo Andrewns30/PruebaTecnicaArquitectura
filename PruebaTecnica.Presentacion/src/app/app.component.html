@@ -1,0 +1,23 @@
+﻿
+<div class="container">
+    <h1 id="tableLabel">Presion el boton para buscar los usuarios</h1>
+
+    <button type="button" (click)="clickButton()" class="btn btn-primary">Buscar</button>
+    
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <th scope="row">{{ user.usuId }}</th>
+                <td>{{ user.nombre + " " + user.apellido }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
